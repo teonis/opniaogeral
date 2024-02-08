@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Resumo de Avaliações de Produtos</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+    <link rel="stylesheet" href="{{ STATIC_URL }}style.css">
+</head>
+<body>
+    <h1>Resumo de Avaliações de Produtos</h1>
+    <p>Descubra o que os outros pensam sobre qualquer produto online!</p>
+    <form action="/results" method="post">
+        <input type="text" name="product_url" placeholder="Insira o link do produto">
+        <button type="submit">Analisar</button>
+    </form>
+</body>
+</html>
