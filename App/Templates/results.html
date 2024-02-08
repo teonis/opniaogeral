@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Resumo de Avaliações de Produtos</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Resumo de Avaliações de Produtos</h1>
+    <h2>{{ summary.title }}</h2>
+    <p>{{ summary.summary }}</p>
+    <h3>Pontos Positivos</h3>
+    <ul>
+        {% for point in summary.positive_points %}
+            <li>{{ point }}</li>
+        {% endfor %}
+    </ul>
+    <h3>Pontos Negativos</h3>
+    <ul>
+        {% for point in summary.negative_points %}
+            <li>{{ point }}</li>
+        {% endfor %}
+    </ul>
+    <p>Índice de Positividade: {{ summary.positivity_index }}</p>
+    <p>Índice de Negatividade: {{ summary.negativity_index }}</p>
+    <p>Índice de Neutralidade: {{ summary.neutrality_index }}</p>
+    <a href="/">Voltar</a>
+</body>
+</html>
